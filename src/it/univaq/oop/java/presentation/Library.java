@@ -28,11 +28,15 @@ public class Library {
 			
 			if(line.equals("1")){
 				
+				Title[] titles = TitleManager.findAllTitles();
+				
+				viewTitles(titles);
+				
 			} else if(line.equals("2")){
 				
 					Title title = createTitle(reader);	
 					
-					TitleManager.create(title);
+					TitleManager.create(title); //inserimento
 
 				} else if(line.equals("3")){
 					
@@ -44,6 +48,14 @@ public class Library {
 						
 		}
 		
+	private static void viewTitles(Title[] titles) {
+			// TODO Auto-generated method stub
+			for(int i = 0; i < titles.length; i ++){
+				
+				System.out.println( "Titolo: " + titles[i].getName()+ "Autore: " + titles[i].getAuthor() );
+			}
+		}
+
 	public static Title createTitle(BufferedReader reader) throws IOException{ 
 		
 		System.out.println("Inserisci il nome");
