@@ -1,6 +1,7 @@
 package it.univaq.oop.java.presentation;
 
 import it.univaq.oop.java.TitleManager;
+import it.univaq.oop.java.business.impl.MemoryTitleManager;
 import it.univaq.oop.java.business.model.Title;
 import it.univaq.oop.java.business.model.TitleKind;
 
@@ -13,7 +14,10 @@ public class Library {
 		public static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 	
 		public static void main(String[] args) throws IOException{
-								
+			
+			TitleManager manager = new MemoryTitleManager();
+
+		
 			System.out.println("(1) Visualizza titoli");
 			
 			System.out.println("(2) Inserisci il titolo");
@@ -28,7 +32,8 @@ public class Library {
 			
 			if(line.equals("1")){
 				
-				Title[] titles = TitleManager.findAllTitles();
+								
+				Title[] titles = manager.findAllTitles();
 				
 				viewTitles(titles);
 				
@@ -36,7 +41,7 @@ public class Library {
 				
 					Title title = createTitle(reader);	
 					
-					TitleManager.create(title); //inserimento
+					manager.create(title); //inserimento
 
 				} else if(line.equals("3")){
 					

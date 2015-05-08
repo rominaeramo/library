@@ -4,14 +4,7 @@ import it.univaq.oop.java.business.model.Title;
 
 public interface TitleManager {
 	
-	static void create(Title title) {
-		// TODO Auto-generated method stub
-		
-	}
+	void create(Title title);
 
-	static Title[] findAllTitles() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-		
+	Title[] findAllTitles();
 }
