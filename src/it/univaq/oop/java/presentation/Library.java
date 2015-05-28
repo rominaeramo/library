@@ -8,6 +8,8 @@ import it.univaq.oop.java.business.model.TitleKind;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Iterator;
+import java.util.List;
 
 public class Library {
 
@@ -17,7 +19,6 @@ public class Library {
 			
 			TitleManager manager = new MemoryTitleManager();
 
-		
 			System.out.println("(1) Visualizza titoli");
 			
 			System.out.println("(2) Inserisci il titolo");
@@ -33,7 +34,7 @@ public class Library {
 			if(line.equals("1")){
 				
 								
-				Title[] titles = manager.findAllTitles();
+				List<Title> titles = manager.findAllTitles();
 				
 				viewTitles(titles);
 				
@@ -41,7 +42,7 @@ public class Library {
 				
 					Title title = createTitle(reader);	
 					
-					manager.create(title); //inserimento
+					manager.createTitle(title); //inserimento
 
 				} else if(line.equals("3")){
 					
@@ -53,12 +54,22 @@ public class Library {
 						
 		}
 		
-	private static void viewTitles(Title[] titles) {
+	private static void viewTitles(List<Title> titles) {
 			// TODO Auto-generated method stub
-			for(int i = 0; i < titles.length; i ++){
-				
-				System.out.println( "Titolo: " + titles[i].getName()+ "Autore: " + titles[i].getAuthor() );
+		
+		Iterator<Title> i = titles.iterator();
+		while(i.hasNext()){
+			Title title = i.next();
+		}
+		
+		/*for(Iterator<Title> i = titles.iterator();i.hasNext();){
+			Title title = i.next();
+		}*/
+		/*
+		for(int i = 0; i < titles.length; i ++){	
+			System.out.println( "Titolo: " + titles[i].getName()+ "Autore: " + titles[i].getAuthor() );
 			}
+		 */
 		}
 
 	public static Title createTitle(BufferedReader reader) throws IOException{ 
