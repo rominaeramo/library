@@ -62,6 +62,17 @@ public class Library {
 			Title title = i.next();
 		}
 		
+		/*for(Title title : titles){ //for(Type t: elements) {}
+			System.out.println("Titolo: " + title.getName() + 
+					", Autore: " + title.getAuthor() + 
+					", Descrizione: " + title.getDescription() +   
+					", ISBN: " + title.getIsbn() +
+					", Anno di pubblicazione: " + title.getPublicationYear() +
+					", Editore: " + title.getEditor() +
+					", Tipo: " + title.getTitleKind().getName() 
+		);
+		}*/
+		
 		/*for(Iterator<Title> i = titles.iterator();i.hasNext();){
 			Title title = i.next();
 		}*/
