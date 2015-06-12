@@ -25,9 +25,9 @@ public class MemoryTitleManager implements TitleManager{
 	*/
 	protected static List<Title> titles = new ArrayList<Title>();		
 	static {
-		titles.add( new Title("Thinking in Java - volume 1", "Bruce Eckel", "Manuale di Java. I fondamenti", "8871923030", 2006, "Pearson", BOOK));
-		titles.add( new Title("Thinking in Java - volume 2", "Bruce Eckel", "Manuale di Java. Tecniche Avanzate", "8871923049", 2006, "Pearson", BOOK));
-		titles.add( new Title("Thinking in Java - volume 3", "Bruce Eckel", "Manuale di Java. Concorrenza ed interfacce grafiche", "8871923057", 2006, "Pearson", BOOK));
+		titles.add( new Title(1,"Thinking in Java - volume 1", "Bruce Eckel", "Manuale di Java. I fondamenti", "8871923030", 2006, "Pearson", BOOK));
+		titles.add( new Title(2,"Thinking in Java - volume 2", "Bruce Eckel", "Manuale di Java. Tecniche Avanzate", "8871923049", 2006, "Pearson", BOOK));
+		titles.add( new Title(3, "Thinking in Java - volume 3", "Bruce Eckel", "Manuale di Java. Concorrenza ed interfacce grafiche", "8871923057", 2006, "Pearson", BOOK));
 	};	
 	
 	

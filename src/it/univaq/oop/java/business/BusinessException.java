@@ -6,8 +6,7 @@ public class BusinessException extends RuntimeException{
 		super();
 	}
 
-	public BusinessException(String message, Throwable cause,
-			boolean enableSuppression, boolean writableStackTrace) {
+	public BusinessException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
 		super(message, cause, enableSuppression, writableStackTrace);
 	}
 

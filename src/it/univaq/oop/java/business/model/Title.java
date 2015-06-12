@@ -9,6 +9,7 @@ package it.univaq.oop.java.business.model;
  */
 public class Title {
 	
+	private int id;
 	private String name;
 	private String author;
 	private String description;
@@ -24,15 +25,6 @@ public class Title {
 		// TODO Auto-generated constructor stub
 	}
 	
-	/**
-	 * @param name
-	 * @param author
-	 * @param description
-	 * @param isbn
-	 * @param publicationYear
-	 * @param editor
-	 * @param titleKind
-	 */
 	public Title(String name, String author, String description, String isbn,
 			int publicationYear, String editor, TitleKind titleKind) {
 		super();
@@ -44,6 +36,21 @@ public class Title {
 		this.editor = editor;
 		this.titleKind = titleKind;
 	}
+
+	
+	public Title(int id, String name, String author, String description,
+			String isbn, int publicationYear, String editor, TitleKind titleKind) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.author = author;
+		this.description = description;
+		this.isbn = isbn;
+		this.publicationYear = publicationYear;
+		this.editor = editor;
+		this.titleKind = titleKind;
+	}
+
 
 	public String getName() {
 		return name;
@@ -92,7 +99,21 @@ public class Title {
 	public void setEditor(String editor) {
 		this.editor = editor;
 	}
+
+	public TitleKind getTitleKind() {
+		return titleKind;
+	}
+
+	public void setTitleKind(TitleKind titleKind) {
+		this.titleKind = titleKind;
+	}
 	
-	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 }
